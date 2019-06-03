@@ -1,0 +1,46 @@
+ docker pull nginx:1.7.9
+
+ docker run -it --name c1 nginx:1.7.9 bash
+ -----+----  +   --+--  +  ----+----- --+--
+      |      |     |    |      |        +------- Command To Be Run
+      |      |     |    |      +---------------- Image to be Used
+      |      |     +    +----------------------- Name of Container
+      |      +---------------------------------- Interactive Mode
+      +----------------------------------------- Command to create & run container
+
+
+
+ docker ps		List all Active (Running) Containers
+ docker ps -a		List all Active and Non Active Containers
+
+ docker inspect c1	Print Meta-Data for given container
+
+ docker rm c1		Delete a Stopped container
+ docker stop c1		Stop a Running container
+
+
+Running in Detached MODE
+ docker run -d -p 8080:80 --name c1 nginx:1.7.9 
+
+ -d	Detached Mode (No foreground activity)
+ -p     Port Mapping (Map Local port 8080 to Container port 80)
+
+Enter into RUNNING container  
+  docker exec -it c1 bash	=> (Execute a command "bash" in interactive mode on container c1)
+
+Switch to NGINX HTML directory
+ cd /usr/share/nginx/html
+
+Overwrite the contents of index.html page
+ echo "<h2>Hello World</h2>" > index.html
+
+Open "localhost:8080" in browser
+
+Now, Create a file "index.html" in host system and copy to container
+ docker cp index.html c1:/usr/share/nginx/html/index.html
+
+Open "localhost:8080" in browser
+
+
+
+
