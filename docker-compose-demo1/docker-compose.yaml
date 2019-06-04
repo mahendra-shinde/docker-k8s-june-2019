@@ -13,7 +13,12 @@ services:
       - 8000:80
     networks:
       - net1
+    environment: 
+      dbpassword: ${dbpass}
 
 # Defined a new private docker network for this deployment
 networks: 
   net1:
+
+secrets:
+  external: dbpass
