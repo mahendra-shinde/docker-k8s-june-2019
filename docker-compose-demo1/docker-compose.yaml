@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  app1:
+    image: mcr.microsoft.com/dotnet/framework/samples:aspnetapp
+    deploy:
+      replicas: 3
+      resources:
+        cpus: 0.2
+        memory: 50M
+    ports: 
+      8000:80
+    networks:
+      - net1
+
+# Defined a new private docker network for this deployment
+networks: 
+  net1:
