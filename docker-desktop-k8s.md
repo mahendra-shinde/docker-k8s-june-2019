@@ -25,3 +25,14 @@
 
     http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/overview?namespace=_all
 
+9.  Click on _Skip_ button
+
+NOTE:   Incase PORT 8001 is Already used, you can try with any other available port
+
+    For Example:
+
+        $ kubectl proxy -p 8008
+
+    Then URL would be:
+
+    http://localhost:8008/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/overview?namespace=_all
