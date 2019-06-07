@@ -1,0 +1,21 @@
+### How to create Secret?
+# $  kubectl create secret generic dbsecret --from-literal "MYSQL_ROOT_PASSWORD=Password@123" 
+
+apiVersion: v1
+kind: Pod
+metadata:
+    name: pod4
+spec:
+    containers:
+    - image: nginx:1.7.9
+      name: web
+    - image: mysql:5.7
+      name: db
+      ## Example of Injecting Secrets in ENVIORNMENT VARS
+      env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: dbsecret
+              key: MYSQL_ROOT_PASSWORD
+              
