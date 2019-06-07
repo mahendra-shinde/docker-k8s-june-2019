@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: pod5
+spec:
+    volumes:
+    ## Default Volume in K8S cluster is EmptyDirectory
+    ## Which would be DESTROYED along with POD
+    - name: mydata
+
+    containers:
+    - image: nginx:1.7.9
+      name: web
+      volumeMounts:
+        - name: mydata
+          mountPath: /home/mydata
