@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: rset1
+spec:
+  replicas: 5
+  selector:
+    name: myapp
+  template:
+    metadata:
+      name: myapp
+      labels:
+        name: myapp
+    spec:
+      containers:
+        - image: nginx:1.7.9
+        ## Never Pull image from registry, use locally available one
+          imagePullPolicy: Never
+          name: web
+## Create a deployment
+# $ kubectl apply -f replica-set-1.yaml
+## Check the PODS in rset1
+# $ kubectl get pods -l name=myapp
