@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet
 
 WORKDIR /app
 
