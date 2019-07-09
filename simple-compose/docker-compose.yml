@@ -1,0 +1,26 @@
+version: "3"
+
+networks: 
+  net1:
+    driver: transparent
+
+services: 
+  app1:
+    image: mcr.microsoft.com/windows/servercore:ltsc2016
+    hostname: instance1
+    command: ping -t localhost
+    depends_on: 
+      - app2
+    networks: 
+      - net1
+
+  app2:
+    image: microsoft/mssql-server-windows-developer
+    hostname: mssqldb
+    environment: 
+      SA_PASSWORD: 'password123'
+      ACCEPT_EULA: 'Y'
+        
+    networks: 
+      - net1
+
