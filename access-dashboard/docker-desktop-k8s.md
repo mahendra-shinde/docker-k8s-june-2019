@@ -25,7 +25,7 @@
 7.  Collect the default system token from kubectl
     
     ```
-    $ kubectl describe serviceaccounts
+    $ kubectl describe serviceaccounts admin-user -n kube-system
     ```
 
     You must be getting an output similar to this one:
@@ -34,7 +34,7 @@
     Now, retrive the actual token string using command:
 
     ```
-    $ kubectl describe secret {TOKEN-NAME}
+    $ kubectl describe secret {TOKEN-NAME} -n kube-system
     ```
     ![alt text](token-2.png "Getting Token Value")
 
@@ -63,4 +63,4 @@ NOTE:   Incase PORT 8001 is Already used, you can try with any other available p
     
 Then URL would be:
 
-> http://localhost:8008/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/overview?namespace=_all
+> http://localhost:8008/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/ 
