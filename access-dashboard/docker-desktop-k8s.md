@@ -19,7 +19,7 @@
 6.  Deploy k8s dashboard using command:
 
     ```
-    $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/aio/deploy/recommended/kubernetes-dashboard.yaml
+    $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta1/aio/deploy/recommended.yaml
     ```
 
 7.  Collect the default system token from kubectl
@@ -46,7 +46,7 @@
 
 9.  Now, Access Dashboard using following URL:
 
-    http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/overview?namespace=_all
+    http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/ 
 
 
 10. Now, Copy the token from step #7 and paste in Token field in web browser:
