@@ -1,12 +1,13 @@
-apiVersion: v1
-kind: ReplicationController
+apiVersion: apps/v1
+kind: ReplicaSet
 metadata:
   name: myapp
 spec:
-  replicas: 2
+  replicas: 5
   selector:
   ## Identify which PODS should be part of this Set
-    name: myapp
+    matchLabels:
+      name: myapp
   template: # Begining of POD Template
     metadata:
     ## define name of POD (Must MATCH with Line# 9 )
