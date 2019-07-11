@@ -22,7 +22,7 @@ spec:
         # imagePullPolicy: Never
           name: web
           ports:
-            - containerPort: 80
+            - containerPort: 3000
 ## Create a deployment
 # $ kubectl apply -f replica-set-1.yaml
 ## Check the PODS in rset1
