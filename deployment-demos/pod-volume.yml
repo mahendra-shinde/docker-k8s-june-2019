@@ -1,15 +1,16 @@
 apiVersion: v1
 kind: Pod
 metadata:
-    name: pod3
+    name: pod4
 spec:
+    volumes:
+      - name: mydbvol
     containers:
     - image: mysql:5.7
       name: db
+      volumeMounts:
+        - name: dbvol
+          mountPath: /var/lib/mysql
       envFrom:
         - configMapRef:
             name: myconfig
-
-
-## Get ALL Data from ConfigMap and
-## Inject in this POD

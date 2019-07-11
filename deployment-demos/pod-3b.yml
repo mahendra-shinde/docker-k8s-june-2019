@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: pod3
+spec:
+    containers:
+    - image: mysql:5.7
+      name: db
+      env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+              secretKeyRef:
+                key: MY_PASSWORD
+                name: myapp 
+
+# From ConfigMap, extract ONLY REQUIRED fields

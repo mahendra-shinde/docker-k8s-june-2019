@@ -23,10 +23,7 @@ spec:
         name: wp
         env:
         - name: WORDPRESS_DB_HOST
-          valueFrom:
-              configMapKeyRef:
-                  name: configmap1
-                  key : WORDPRESS_DB_HOST
+          value: db-service
         - name: WORDPRESS_DB_PASSWORD
           value: 'mahendra$123'
         ports:

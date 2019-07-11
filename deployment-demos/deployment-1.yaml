@@ -1,0 +1,29 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+spec:
+  replicas: 5
+  revisionHistoryLimit: 10
+  selector:
+  ## Identify which PODS should be part of this Set
+    matchLabels:
+      name: myapp
+  template: # Begining of POD Template
+    metadata:
+    ## define name of POD (Must MATCH with Line# 9 )
+      name: myapp
+      labels:
+        name: myapp
+    spec:
+      containers:
+        - image: mahendrshinde/hostname:node
+        ## Never Pull image from registry, use locally available one
+        # imagePullPolicy: Never
+          name: web
+          ports:
+            - containerPort: 80
+## Create a deployment
+# $ kubectl apply -f replica-set-1.yaml
+## Check the PODS in rset1
+# $ kubectl get pods -l name=myapp

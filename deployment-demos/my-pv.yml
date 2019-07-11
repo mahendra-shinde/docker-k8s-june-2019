@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mydbvol
+spec:
+  hostPath:
+    path: /usr/temp/
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - "ReadWriteMany"
+    
