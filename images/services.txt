@@ -1,0 +1,14 @@
+Service Types:
+	ClusterIP:	Assigns a private Cluster scoped IP
+			Address.
+			Other services running on cluster can
+			connect to current service.
+
+	LoadBalancer:	Setting up Reverse Proxy that connects
+			Host System to cluster running in VM
+			Docker Desktop, MiniKube
+	
+	ExternalIp:	Maps your service to an External IP.
+	
+	NodePort:	Map your service to ALL worker nodes!
+			Port Range Available is 30000 ->
