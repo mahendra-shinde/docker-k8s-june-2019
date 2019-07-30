@@ -6,7 +6,7 @@ FROM nginx:1.7.9
 LABEL  Author="Mahendra Shinde"
 
 #Commands tobe executed inside new container
-copy index.html /usr/share/nginx/html
+COPY index.html /usr/share/nginx/html
 
 # To Trigger a BUILD, Run command:
 #  docker build -t myapp:v2 . 
