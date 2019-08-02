@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\docker-k8s-june-2019\\dotnet-demos\\myapp1\\myapp1.csproj": {}
+  },
+  "projects": {
+    "C:\\docker-k8s-june-2019\\dotnet-demos\\myapp1\\myapp1.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\docker-k8s-june-2019\\dotnet-demos\\myapp1\\myapp1.csproj",
+        "projectName": "myapp1",
+        "projectPath": "C:\\docker-k8s-june-2019\\dotnet-demos\\myapp1\\myapp1.csproj",
+        "packagesPath": "C:\\Users\\mahendra\\.nuget\\packages\\",
+        "outputPath": "C:\\docker-k8s-june-2019\\dotnet-demos\\myapp1\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mahendra\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

@@ -1,10 +1,13 @@
+### dotnet build -o publish
+
 FROM mcr.microsoft.com/dotnet/core/aspnet
 
 WORKDIR /app
-
+## Ensure PUBLISH directory contains build artifacts (DLLs)
+## if not, run `dotnet build -o publish`
 COPY publish/* /app/
 
-## Define an Entrypoint for new container
+## Define an main process for new container
 CMD dotnet myapp1.dll
 
 # docker build -t myapp:v3 . 
