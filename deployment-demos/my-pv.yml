@@ -3,10 +3,11 @@ kind: PersistentVolume
 metadata:
   name: mydbvol
 spec:
+  storageClassName: hostpath
   hostPath:
     path: /usr/temp/
   capacity:
     storage: 5Gi
   accessModes:
-    - "ReadWriteMany"
+    - "ReadWriteOnce"
     
