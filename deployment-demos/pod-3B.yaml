@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+    name: pod3b
+spec:
+    containers:
+    - image: mysql:5.7
+      name: db
+      envFrom:
+        - secretRef:
+            name: mysecret2
+
+
+## Get ALL Data from ConfigMap and
+## Inject in this POD

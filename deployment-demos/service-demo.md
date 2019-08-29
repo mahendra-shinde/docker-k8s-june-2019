@@ -3,8 +3,8 @@
 
     ```shell
     $ kubectl apply -f ./deployment-1.yaml 
-    $ kubectl get rs -l name:myapp
-    $ kubectl get po -l name:myapp
+    $ kubectl get rs -l name=myapp
+    $ kubectl get po -l name=myapp
     ```
 
 2.  Deploy the [Service](./service2.yml)

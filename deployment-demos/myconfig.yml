@@ -4,3 +4,5 @@ metadata:
   name: myconfig
 data:
   MYSQL_ROOT_PASSWORD: Password@123
+  MYSQL_USER: mahendra
+  MYSQL_PASSWORD: Password@1234
