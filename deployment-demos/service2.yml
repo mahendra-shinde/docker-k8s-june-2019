@@ -11,7 +11,5 @@ spec:
   ports:
   - port: 8080
     nodePort: 30002
-    targetPort: 80
-    # Port on Node to be mapped to
-    # this service
+    targetPort: 3000
     
