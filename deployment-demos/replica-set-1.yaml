@@ -3,7 +3,7 @@ kind: ReplicaSet
 metadata:
   name: myapp
 spec:
-  replicas: 5
+  replicas: 10
   selector:
   ## Identify which PODS should be part of this Set
     matchLabels:
