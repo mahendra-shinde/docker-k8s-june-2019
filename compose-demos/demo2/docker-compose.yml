@@ -1,0 +1,29 @@
+version: "3.0"
+
+networks: 
+  net1:
+    driver: ics
+    ipam:
+      driver: default
+      config: 
+      - subnet: 13.10.0.0/24
+
+services:
+  app1:
+    image: mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2019
+    links: 
+    - app2
+    networks: 
+    - net1
+    volumes: 
+    - "shared:c:/shared-dir"
+
+  app2:
+    image: mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2019
+    networks: 
+    - net1
+    volumes: 
+    - "shared:c:/commons"
+
+volumes: 
+  shared:

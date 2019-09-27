@@ -3,7 +3,7 @@ version: "3"
 services:
   app1:
     # please replace ltsc2016 to ltsc2019 in case your windows version is 1903
-    image: mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2016
+    image: mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2019
     # define the PORT
     ports: 
     - "8080:80"
@@ -12,7 +12,7 @@ services:
   
   app2:
     # please replace ltsc2016 to ltsc2019 in case your windows version is 1903
-    image: mcr.microsoft.com/windows/servercore:ltsc2016
+    image: mcr.microsoft.com/windows/servercore:ltsc2019
     # assign network name (network must exists!)
     networks: 
     - net1

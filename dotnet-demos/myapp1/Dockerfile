@@ -1,6 +1,6 @@
 ### dotnet build -o publish
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2.2-nanoserver-sac2016
+FROM mcr.microsoft.com/dotnet/core/aspnet:latest
 
 WORKDIR /app
 ## Ensure PUBLISH directory contains build artifacts (DLLs)
