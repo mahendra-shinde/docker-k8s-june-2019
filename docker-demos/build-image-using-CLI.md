@@ -16,7 +16,6 @@ $ docker run --name temp1 -it mcr.microsoft.com/windows/servercore/iis powershel
 $ docker exec -it temp1 powershell
 $ cd inetpub\wwwroot
 $ del *.htm
-$ mkdir \myapp
 $ exit
 ```
     
@@ -26,7 +25,7 @@ $ exit
     Switch to folder which contains your application. use following command to copy files
 
 ```cmd
-$ docker cp c:\myapp\*.html temp1:\myapp
+$ docker cp c:\myapp\*.html temp1:\inetpub\wwwroot
 ```
 
 5. Test the application
@@ -42,7 +41,7 @@ $ docker stop temp1
 7  Capture the container's state into a new image.
 
 ```cmd
-$ docker commit -t myapp:1 temp1
+$ docker commit temp1 myapp:1
 ```
 
 8  Delete the temporary container
