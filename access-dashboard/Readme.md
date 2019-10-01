@@ -68,3 +68,11 @@ NOTE:   Incase PORT 8001 is Already used, you can try with any other available p
 Then URL would be:
 
 > http://localhost:8008/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/ 
+
+> NOTES: If dashboard is not working and POD is failed with an ERROR, try to pull the image manually and then redeploy dashboard using command:
+
+    ```bash
+    $ docker pull docker pull kubernetesui/dashboard:v2.0.0-beta1 
+
+    $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta1/aio/deploy/recommended.yaml
+    ```
