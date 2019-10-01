@@ -11,6 +11,8 @@ networks:
 services:
   app1:
     image: mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2019
+    deploy:
+      replicas: 3
     links: 
     - app2
     networks: 

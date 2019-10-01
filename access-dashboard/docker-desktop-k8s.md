@@ -19,6 +19,10 @@
 6.  Deploy k8s dashboard using command:
 
     ```
+    $ kubectl apply -f admin-user.yaml
+    
+    $ kubectl apply -f role-binding.yml
+
     $ kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta1/aio/deploy/recommended.yaml
     ```
 
